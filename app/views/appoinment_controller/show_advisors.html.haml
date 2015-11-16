@@ -1,0 +1,14 @@
+= "There are #{@advisors.count} adviosrs for order #{@order_id} from for customer #{Order.find(@order_id).customer.name_with_id}"
+%table#adviosrs
+  %thead
+    %tr
+      %th Product ID
+      %th Product name
+      %th Quantity
+      %th Price
+  - @adviosrs.each do |adviosr|
+    %tr
+      %td= adviosr.advisorId
+      %td= adviosr.name
+      %td= adviosr.phone
+  

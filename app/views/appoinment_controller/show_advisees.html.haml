@@ -1,0 +1,5 @@
+= "There are #{@advisees.count} advisees for Advisor #{Advisor.find_by_id(@advisorId).name_with_id}"
+= form_tag "show_appointments", method: :get do
+  =collection_select(:advisees, :id, @advisees.all, :id, :phone)
+  = submit_tag "Get this advisees all details"
+ 

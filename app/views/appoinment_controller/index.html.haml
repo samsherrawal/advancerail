@@ -1,0 +1,7 @@
+%h1 appointment#index
+%p Find me in app/views/appointment_controller/index.html.haml
+= form_tag "show_appointments", method: :get do 
+  = collection_select(:appointments, :id, @appointment.all, :id, :name_with_id)
+  = submit_tag "Get the appointment details"
+ 
+    

@@ -1,0 +1,2 @@
+module AppoinmentControllerHelper
+end
